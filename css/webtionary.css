@@ -1,0 +1,53 @@
+.webtionary-container, .webtionary-container * {
+  transition-property: none;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+  font-family: inherit;
+  box-sizing: border-box; }
+
+.webtionary-container {
+  font-family: "Roboto", "Noto Sans", sans-serif;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  pointer-events: none;
+  transition-property: background; }
+  .webtionary-container .webtionary-popup {
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
+    margin: 20px 10px;
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+    width: 500px;
+    height: 350px;
+    max-width: calc(100% - 2 * $margin-x);
+    max-height: calc(100% - 2 * $margin-y);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 2px;
+    background-color: #ffffff;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform; }
+
+body.webtionary-opened {
+  pointer-events: none;
+  overflow: hidden; }
+  body.webtionary-opened .webtionary-container {
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.5); }
+    body.webtionary-opened .webtionary-container .webtionary-popup {
+      -webkit-transform: translateY(0);
+              transform: translateY(0); }

@@ -1,0 +1,25 @@
+{
+  "name": "webtionary",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/z-------------/Webtionary.git"
+  },
+  "author": "Zack Guard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/z-------------/Webtionary/issues"
+  },
+  "homepage": "https://github.com/z-------------/Webtionary#readme",
+  "dependencies": {
+    "autoprefixer": "^6.3.6",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.1.1",
+    "gulp-sass": "^2.3.1"
+  }
+}

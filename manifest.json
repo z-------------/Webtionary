@@ -4,14 +4,23 @@
     "short_name": "Webtionary",
     "description": "A plain text description",
     "version": "0.0.1",
-    "version_name": "alpha",
     "author": "Zack Guard",
 
     "content_scripts": [
         {
-            "matches": ["<all_urls>"],
-            "css": ["css/webtionary.css"],
-            "js": ["lib/jquery-2.2.3.min.js", "js/webtionary.js"]
+            "matches": ["*://*/*"],
+            "js": ["lib/jquery-2.2.3.min.js", "js/contentScript.js"],
+            "css": ["css/webtionary.css"]
         }
+    ],
+
+    "background": {
+        "scripts": ["js/background.js"]
+    },
+
+    "permissions": [
+        "contextMenus",
+        "tabs",
+        "*://*/*"
     ]
 }
